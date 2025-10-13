@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "5984bb92d053315e92aa5daf8596ef15"
+name = "discount-app"
+application_url = "https://immense-neat-garfish.ngrok-free.app"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2026-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+scopes = "read_products,write_products,read_discounts,write_discounts"
+
+[auth]
+redirect_urls = [ "https://immense-neat-garfish.ngrok-free.app/api/auth" ]
