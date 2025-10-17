@@ -1,7 +1,13 @@
-query CartInput {
+query RunInput {
   cart {
     lines {
       id
+      merchandise {
+        ... on ProductVariant {
+          id
+          product { id }
+        }
+      }
       cost {
         subtotalAmount {
           amount
@@ -9,7 +15,10 @@ query CartInput {
       }
     }
   }
-  discount {
-    discountClasses
+discount {
+  metafield(namespace: "$app:product-discount", key: "configuration") {
+    value
   }
+}
+
 }

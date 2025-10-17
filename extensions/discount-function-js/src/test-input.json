@@ -1,0 +1,18 @@
+{
+  "discountNode": {
+    "metafield": {
+      "value": "{\"percentage\":35,\"productIds\":[\"gid://shopify/Product/7431978680407\"]}"
+    }
+  },
+  "cart": {
+    "lines": [
+      {
+        "id": "gid://shopify/CartLine/1",
+        "merchandise": {
+          "product": { "id": "gid://shopify/Product/7431978680407" }
+        },
+        "cost": { "subtotalAmount": { "amount": "100.00" } }
+      }
+    ]
+  }
+}
